@@ -52,7 +52,7 @@ return (
       </a>
     </Pop>
     <Pop open={active === 3} onClose={() => setActive(null)}>
-      <h1>Tune in on Shalfi's streams:</h1>
+      <h1>Tune in on Shalfis streams:</h1>
       <a href="https://www.twitch.tv/shalfi_" target="_blank" rel="noreferrer">
       <i className="fa-brands fa-twitch fa-4x tw" />
       </a>
