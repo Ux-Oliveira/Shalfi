@@ -59,7 +59,7 @@ return (
     </Pop>
     <div className="made-by">
      <span>Made by </span>
-      <a href="https://youtube.com/" target="_blank" rel="noreferrer" className="made-link"> Rick's a Human</a></div>
+      <a href="https://youtube.com/@Ricksahuman" target="_blank" rel="noreferrer" className="made-link"> Rick's a Human</a></div>
   </section>
  )
 }
