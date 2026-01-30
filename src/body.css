@@ -89,7 +89,7 @@
 /*gotta make it fit on mobile*/
 @media (max-width: 768px) {
  .body-section {
-    margin-top: 220px;
+    margin-top: -220px;
 }
   
 }
