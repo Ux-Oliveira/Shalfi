@@ -134,3 +134,16 @@ z-index: 5;
     75% 100%, 25% 100%, 0% 50%
     ); 
 }
+
+/*making sure text is above everything on mobile*/
+
+@media (max-width: 768px) {
+  .song-text {
+    position: relative;
+    z-index: 9999;
+  }
+
+  .visual-flow {
+    z-index: 1;
+  }
+}
