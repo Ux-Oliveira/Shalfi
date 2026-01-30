@@ -112,7 +112,7 @@ social-icon {
 .wave {
   position: absolute;
   left: 0;
-  width: 100%;
+  width: 100vw;
   height: 240px; /*this should make it bigger and more visible*/
   pointer-events: none;
 }
@@ -130,7 +130,7 @@ social-icon {
   position: absolute;
   top: -160px;
   left: 0;
-  width: 100%;
+  width: 100vw;
   height: 160px;
   display: block;
   scale: 1 -1;
