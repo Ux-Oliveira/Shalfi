@@ -1,0 +1,88 @@
+:root {
+  --c1: #7490BB;
+  --c2: #967AD8;
+  --c3: #84635E;
+  --c4: #E8888B;
+  --c5: #F7DBC2;
+  --c6: #D7CAEC;
+  --dark: #414141;
+}
+
+.body-section {
+    background: var(--c1);
+    padding: 140px 0;
+    width: 100vw; /*to make the color fill the whole section horizontaly*/
+    margin-left: calc(50% - 50vw);
+    margin-top: 160px;
+    display: flex;
+    justify-content: center;
+    /*this might fix the positioning issue*/
+    position: relative;
+    z-index: 1;
+}
+.grid {
+    width: 92vw;
+    max-width: 1300px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 260px;
+    gap: 6px;
+}
+.card {
+    width: 100%; 
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+
+    border-radius: 22px;
+
+    will-change: transform; /*to stop subpixel crop jitter*/
+}
+/*EACH RECTANGLE WILL HAVE AN IMAGE THAT WILL SLIDE AWAY AS WE HOVER REVEALING ANOTHER IMAGE BELOW IT*/
+.img-top, 
+.img-bottom {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.60s ease;
+    border-radius: inherit;
+}
+.img-top {
+    z-index: 2;
+}
+.card:hover .img-top {
+    transform: translateY(-100%);
+}
+/*pop modal below*/
+.pop-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.65);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pop-modal {
+    width: 420px;
+    height: 320px;
+    background: rgba(0,0,0,0.85);
+    color: white;
+    padding: 24px;
+    text-align: center;
+    border: 2px solid var(--c5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+.sc { color: #FF6E00;}
+.bc { color: #1DA0C3;}
+.tw { color: #967AD8; outline: none;}
+/*pulsating icons*/
+#record-icon {
+    color: var(--c4);
+    margin-top: -45px;
+    font-weight: bolder;
+}

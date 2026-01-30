@@ -1,0 +1,294 @@
+/*let´s stablish the color pallete it is based on thsese colors i already marked up*/
+
+:root {
+  --c1: #7490BB;
+  --c2: #967AD8;
+  --c3: #84635E;
+  --c4: #E8888B;
+  --c5: #F7DBC2; 
+  --c6: #D7CAEC;
+  --dark: #414141;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: system-ui, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: var(--dark);
+  color: white;
+}
+/*this is the guitar button*/
+.guitar-btn {
+  position: fixed;
+  font-size: 28px;
+  top: 16px;
+  left: 16px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 2px solid var(--c5);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s, transform 0.3s;
+  animation: glare 3s infinite linear;
+  z-index: 2; /*I THINK THIS IS MAKING THE BUTTON SIT ATOP THE REST OF THE PAGE*/
+}
+.guitar-btn i {
+  font-size: 35px;
+  color: var(--c5);
+}
+
+@keyframes glare {
+  0% { box-shadow: 0 0 5px var(--c6); }
+  50% { box-shadow: 0 0 18px var(--c2); }
+  100% { box-shadow: 0 0 5px var(--c6); }
+}
+
+/*this is the social media icons and stuff*/
+a {
+  text-decoration: none;
+}
+
+.social-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 24px;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  z-index: 9;
+} /*I NEED TO MAKE THIS DIFFERENT FOR MOBILE I NEED THE THING TO BE VERTICAL ON MOBILE SCREENS*/
+.social-icon i {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 2px solid var(--c6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: pulse 2s infinite;
+}
+.social-icon i {
+  font-size: 22px;
+  color: var(--c6);
+}
+social-icon {
+  text-decoration: none !important;
+  color: inherit;
+  display: inline-flex; 
+  align-items: center;
+  justify-content: center;
+}
+
+
+@keyframes pulse {
+  0% { transform: scale(1); box-shadow: 0 0 5px var(--c6); }
+  50% { transform: scale(1.1); box-shadow: 0 0 15px var(--c2); }
+  100% { transform: scale(1); box-shadow: 0 0 5px var(--c6); }
+}
+
+/*hero*/
+/*i think some css changes will be enough to make it wavy*/
+.hero {
+  position: relative;
+  height: 45vh;
+  overflow: hidden;
+}
+.banner {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.wave {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 240px; /*this should make it bigger and more visible*/
+  pointer-events: none;
+}
+.content {
+  position: relative;
+  padding: 160px 24px 48px;
+  margin-top: -70px;
+  /*height: 470px;*/
+  background: var(--c1);
+  text-align: center;
+  z-index: 1;
+}
+.content .wave {
+  position: absolute;
+  top: -160px;
+  left: 0;
+  width: 100%;
+  height: 160px;
+  display: block;
+  scale: 1 -1;
+  transform-origin: center;
+  z-index: 1;
+}
+.content .wave-front {
+  z-index: 3;
+}
+
+.content .wave-back {
+  top: -210px;
+  z-index: 2;
+  opacity: 0.85;
+}
+.content .wave.wave-back {
+  top: -175px;
+}
+.content .wave-middle {
+  top: -210px;
+  z-index: 2;
+  opacity: 0.85;
+}
+.content .wave.wave-middle {
+  top: -168px;
+}
+
+.head-video-btn {
+  position: absolute;
+  top: 40px;    
+  left: 50%;
+  translate:-50%;
+  width: 940px;
+  height: 140px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+
+.head-video-btn video {
+  width: 999px;
+  height: 290px;
+  width: 940px;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+.impact-name {
+  position: fixed;
+  top: 18px;
+  right: 20px;
+  font-family: Impact, 'Arial Black', sans-serif;
+  font-size: 68px;
+  color: var(--c5);
+  z-index: 3;
+  pointer-events: none;
+}
+
+.impact-name .letters {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+}
+.impact-name .letters span {
+  opacity: 0;
+  animation: letterIn 13s infinite;
+}
+/*NOW the animation sequence*/
+.impact-name .letters span:nth-child(1) { animation-delay: 1s; }
+.impact-name .letters span:nth-child(2) { animation-delay: 2s; }
+.impact-name .letters span:nth-child(3) { animation-delay: 3s; }
+.impact-name .letters span:nth-child(4) { animation-delay: 4s; }
+.impact-name .letters span:nth-child(5) { animation-delay: 5s; }
+.impact-name .letters span:nth-child(6) { animation-delay: 6s; }
+.impact-name .letters span:nth-child(7) { animation-delay: 7s; }
+.impact-name .letters span:nth-child(8) { animation-delay: 8s; }
+.impact-name .letters span:nth-child(9) { animation-delay: 9s; }
+
+
+
+@keyframes letterIn {
+ 0% { opacity: 0; }
+ 45% { opacity: 0; }
+ 50% { opacity: 1; }
+ 56% { opacity: 1; }
+ 60% { opacity: 0; }
+ 100% { opacity: 0; }
+}
+
+
+
+@media (max-width: 768px) {
+  .social-modal {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .social-modal {
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 80px;
+    flex-direction: column; /*this will make it vertical*/
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 90px; /*this will give some space for the guitar button*/
+    gap: 22px;
+  }
+}
+/*NOW: The main mobile fixes*/
+@media (max-width: 768px) {
+  html, body {
+    overflow-x: hidden; /*to prevent horizontal scrolling*/
+  }
+  .hero {
+    height: 32vh;
+  }
+  .hero-video-btn {
+    width: 92vw;
+    height: auto;
+    top: 20px;
+  }
+  .head-video-btn {
+    width: 100%;
+    height: auto;
+  }
+  .impact-name {
+    font-size: 34px;
+    right: 12px;
+    top: 12px;
+  }
+  .content {
+    padding: 120px 16px 40px;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 220px;
+  }
+  .body-section {
+    padding: 80px 0;
+    margin-top: 80px;
+  }
+  .pop-modal {
+    width: 90vw;
+    height: auto;
+  }
+  .song-text {
+  width: 92vw;
+  height: auto;
+  font-size: 18px;
+  padding: 14px 18px;
+}
+.audio-block {
+  margin-top: 120px;
+ }
+}
+
+/*
+ISSUES: there's a white line above the button that is only visible on mobile screens. I hate how the 4 images look like vertically stacked. i want it to maintaing the horizontal setup on mobile... and there's a black empty space at the buttom and i domnt think this will be good enough for tablet screens either... but i really wanna see this on my hands so for now! I'LL CREATE THE 4 TO 8 IMAGES I NEED FOR MY RECTANGLE QUADRANTS AND THEN ILL DEPLOY TO VERCEL AND MAKE IT AN ACTUAL WEBSITE I CAN TEST ON A REAL PHONE BEFORE FINESSING THE MOBILE VIEWING OF THE WHOLE PAGE.. 
+*/
