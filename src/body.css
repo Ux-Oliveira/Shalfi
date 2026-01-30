@@ -101,17 +101,20 @@
   z-index: 20;
 }
 .made-link {
-  padding: 6px 12px;
-  border-radius: 999px;
-  border: 2px solid var(--c6);
   color: var(--c6);
   text-decoration: none;
-  animation: pulse 2s infinite;
+  font-weight: bold;
+  animation: textPulse 2s infinite;
   transition: 0.3s;
 }
+
 .made-link:hover {
-  background: var(--c6);
-  color: var(--dark);
+  color: var(--c2);
+}
+@keyframes textPulse {
+  0%   { text-shadow: 0 0 4px var(--c6), 0 0 8px var(--c6); }
+  50%  { text-shadow: 0 0 12px var(--c2), 0 0 24px var(--c2); }
+  100% { text-shadow: 0 0 4px var(--c6), 0 0 8px var(--c6); }
 }
 
 @media (max-width: 768px) {
