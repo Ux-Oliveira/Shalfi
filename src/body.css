@@ -11,8 +11,7 @@
 .body-section {
     background: var(--c1);
     padding: 140px 0;
-    width: 100vw; /*to make the color fill the whole section horizontaly*/
-    margin-left: calc(50% - 50vw);
+    width: 100%; /*to make the color fill the whole section horizontaly*/
     margin-top: 160px;
     display: flex;
     justify-content: center;
