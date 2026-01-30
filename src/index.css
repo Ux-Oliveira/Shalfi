@@ -161,7 +161,7 @@ social-icon {
   position: absolute;
   top: 40px;    
   left: 50%;
-  translate:-50%;
+  transform: translateX(-50%);
   width: 940px;
   height: 140px;
   cursor: pointer;
@@ -170,7 +170,6 @@ social-icon {
 
 
 .head-video-btn video {
-  width: 999px;
   height: 290px;
   width: 940px;
   object-fit: contain;
