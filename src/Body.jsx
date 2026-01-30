@@ -57,6 +57,9 @@ return (
       <i className="fa-brands fa-twitch fa-4x tw" />
       </a>
     </Pop>
+    <div className="made-by">
+     <span>Made by </span>
+      <a href="https://youtube.com/" target="_blank" rel="noreferrer" className="made-link"> Rick's a Human</a></div>
   </section>
  )
 }
