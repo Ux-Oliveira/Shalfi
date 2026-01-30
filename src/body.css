@@ -86,3 +86,10 @@
     margin-top: -45px;
     font-weight: bolder;
 }
+/*gotta make it fit on mobile*/
+@media (max-width: 768px) {
+ .body-section {
+    margin-top: 220px;
+}
+  
+}
