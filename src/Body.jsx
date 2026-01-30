@@ -15,7 +15,7 @@ const cards = [
     { top: '/quad3.png',
       bottom: '/banner.png',
     },
-    { top: '/quad4.png',
+    { top: '/newquad.png',
       bottom: '/banner.png',
     }, /*Ill add the photos later*/
 ]
