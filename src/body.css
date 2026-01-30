@@ -87,16 +87,40 @@
     font-weight: bolder;
 }
 
+/*made by stuff*/
+.made-by {
+  position: absolute;
+  right: 24px;
+  bottom: 18px;
+  font-family: 'Comic Neue', 'Baloo 2', 'Fredoka', cursive;
+  font-size: 14px;
+  color: var(--c5);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  z-index: 20;
+}
+.made-link {
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 2px solid var(--c6);
+  color: var(--c6);
+  text-decoration: none;
+  animation: pulse 2s infinite;
+  transition: 0.3s;
+}
+.made-link:hover {
+  background: var(--c6);
+  color: var(--dark);
+}
+
 @media (max-width: 768px) {
   .pop-overlay .pop-modal {
     position: relative;
     z-index: 9999;
   }
-
   .visual-flow {
     z-index: 1;
   }
 }
-
-  
 }
