@@ -36,7 +36,7 @@ return (
     {/*im gonna put the modals here*/}
 
     <Pop open={active === 0} onClose={() => setActive(null)}>
-      <h1>A guitarist and a guitar teacher.</br>Shalfi translates the most specific feelings and thoughts into fire riffs!</h1>
+      <h1>A guitarist and a guitar teacher.<br />Shalfi translates the most specific feelings and thoughts into fire riffs!</h1>
       <a id="record-icon" href="https://counterintuitiverecords.com/collections/shalfi" target="_blank" rel="noreferrer"><p>Buy his recent record!</p></a>
     </Pop>
     <Pop open={active === 1} onClose={() => setActive(null)}>
@@ -57,6 +57,9 @@ return (
       <i className="fa-brands fa-twitch fa-4x tw" />
       </a>
     </Pop>
+    <div className="made-by">
+     <span>Made by </span>
+      <a href="https://youtube.com/" target="_blank" rel="noreferrer" className="made-link"> Rick's a Human</a></div>
   </section>
  )
 }
