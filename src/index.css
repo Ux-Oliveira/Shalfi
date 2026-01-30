@@ -233,16 +233,16 @@ social-icon {
     left: 0;
     height: 100vh;
     width: 170px;
-    flex-direction: column; /*this will make it vertical*/
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: flex-start;
     padding-top: 90px; /*this will give some space for the guitar button*/
-    gap: 22px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 70px;          
+    justify-items: center;
+    align-content: start;
+    row-gap: 22px;
   }
-  .social-icon { flex-direction: column; /*this will make it vertical*/
-    flex-wrap: wrap; }
-}
+  
 /*NOW: The main mobile fixes*/
 @media (max-width: 768px) {
   html, body {
@@ -274,7 +274,7 @@ social-icon {
   }
   .body-section {
     padding: 80px 0;
-    margin-top: 244px;
+    margin-top: 286px;
   }
   .pop-modal {
     width: 90vw;
